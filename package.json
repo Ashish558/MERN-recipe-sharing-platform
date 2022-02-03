@@ -9,6 +9,9 @@
     "start": "node app.js",
     "client": "npm start --prefix client"
   },
+  "engines": {
+    "node": "14.17.0"
+  },
   "author": "ash",
   "license": "ISC",
   "dependencies": {
