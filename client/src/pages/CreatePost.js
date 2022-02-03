@@ -6,6 +6,7 @@ import Steps from '../components/createPost/steps'
 import Ingredients from '../components/createPost/Ingredients'
 import axios from 'axios'
 
+import { domain } from '../services/constants'
 
 export default function CreatePost(props) {
    const [title, setTitle] = useState('')
@@ -27,7 +28,7 @@ export default function CreatePost(props) {
       if (!type) return
 
       const data = { title, ingredients, steps, type }
-      axios.post('http://localhost:4000/post/create', data, {
+      axios.post(`${domain}/post/create`, data, {
          headers: {
             "auth-token": localStorage.getItem('auth-token')
          }
@@ -48,15 +49,14 @@ export default function CreatePost(props) {
          formData.append('postImages', images[key])
       }
 
-      axios.post(`http://localhost:4000/post/${postId}/update/images`, formData, {
+      axios.post(`${domain}/post/${postId}/update/images`, formData, {
          headers: {
             "Content-Type": "multipart/form-data",
             "auth-token": localStorage.getItem('auth-token')
          }
       })
          .then(res => {
-            console.log(res)
-           // window.location = '/login'
+            window.location = '/login'
          })
          .catch(err => {
             console.log(err)
