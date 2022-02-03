@@ -1,12 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import { domain } from '../../../../../services/constants'
+
 function UserDetail({commentedBy}) {
     const { username, profileImageSrc} = commentedBy
     return (
       <User className='user-detail'>
           <Image className='img-container'>
-              <Img src={`http://localhost:4000/images/profile/${profileImageSrc}`} />
+              <Img src={`${domain}/images/profile/${profileImageSrc}`} />
           </Image>
           <Username className='username'> {username} </Username>
       </User>
