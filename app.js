@@ -43,6 +43,4 @@ app.get("*", (req, res) => {
 });
 
 
-const PORT = process.env.PORT || 4000
-server.listen(PORT)
-
+server.listen(process.env.PORT, '0.0.0.0');
