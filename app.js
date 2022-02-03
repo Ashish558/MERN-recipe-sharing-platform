@@ -6,6 +6,7 @@ const path = require("path
 require("dotenv").config()
 
 var app = express()
+var server = require('http').createServer(app)
 
 const corsOptions = {
   allowedHeaders: ['Origin', 'X-Requested-With', 'Content-Type', 'Accept', 'X-Access-Token', 'Authorization', "auth-token"],
@@ -42,6 +43,6 @@ app.get("*", (req, res) => {
 });
 
 
-app.listen(process.env.PORT || 4000, function(){
-  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
-});
+const PORT = process.env.PORT || 4000
+server.listen(PORT)
+
