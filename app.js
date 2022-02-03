@@ -1,7 +1,7 @@
 var express = require('express')
 var mongoose = require('mongoose')
 var cors = require('cors')
-const path = require("path
+const path = require('path')
                      
 require("dotenv").config()
 
@@ -43,4 +43,4 @@ app.get("*", (req, res) => {
 });
 
 
-server.listen(process.env.PORT, '0.0.0.0');
+server.listen(process.env.PORT);
