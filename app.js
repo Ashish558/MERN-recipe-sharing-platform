@@ -1,7 +1,8 @@
-var express = require('express');
-var mongoose = require('mongoose');
+var express = require('express')
+var mongoose = require('mongoose')
 var cors = require('cors')
-
+const path = require("path
+                     
 require("dotenv").config()
 
 var app = express();
@@ -33,6 +34,14 @@ mongoose.connection.on("error", () => {
 
 const routes = require('./routes/routes')
 app.use(routes)
+
+
+app.use(express.static("client/build"))
+
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+});
+
 
 const PORT = process.env.PORT || 4000
 app.listen(PORT)
