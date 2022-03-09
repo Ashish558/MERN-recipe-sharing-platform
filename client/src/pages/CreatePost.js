@@ -56,7 +56,7 @@ export default function CreatePost(props) {
          }
       })
          .then(res => {
-            window.location = '/login'
+            window.location = '/'
          })
          .catch(err => {
             console.log(err)
