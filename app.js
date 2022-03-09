@@ -12,7 +12,7 @@ const corsOptions = {
   allowedHeaders: ['Origin', 'X-Requested-With', 'Content-Type', 'Accept', 'X-Access-Token', 'Authorization', "auth-token"],
   credentials: true,
   methods: 'GET,HEAD,OPTIONS,PUT,PATCH,POST,DELETE',
-  origin: 'https://desolate-mesa-23396.herokuapp.com',
+  origin: 'https://recipe-sharing-platform.herokuapp.com',
   preflightContinue: false,
 }
 
