@@ -57,14 +57,14 @@ flex-wrap: wrap;
 const Item1 = styled.li`
 display: flex;
 align-items: center;
-flex: 0 0 calc(50% - 1rem);
+flex:  0 0 calc(100% - 1rem);
 margin-right: 0.5rem;
 
 @media (min-width: 600px) {
-    flex: 0 0 calc(33% - 1rem);
+    flex: 0 0 calc(50% - 1rem);
 }
-
 `
+
 
 const List2 = styled.ol`
   display: block;
