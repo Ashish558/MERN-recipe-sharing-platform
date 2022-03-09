@@ -60,7 +60,7 @@ function Posts() {
             <Filter setPosts={setPosts} />
             {isLoading && 'Loading...'}
 
-            {isSuccess && posts ?
+            {isSuccess && posts.length >= 1 ?
                 (
                     <PostsList className='posts' id='posts' ref={postsRef}>
                         {posts.map(post => {
@@ -69,7 +69,7 @@ function Posts() {
                     </PostsList>
                 ) : (
                     <PostsList>
-                        <Err> not found</Err>
+                        <Err> Posts not found </Err>
 
                     </PostsList>
                 )
