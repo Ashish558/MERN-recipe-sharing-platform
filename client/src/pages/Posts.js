@@ -52,7 +52,8 @@ function Posts() {
       
     }, [posts])   // eslint-disable-line react-hooks/exhaustive-deps
 
-
+    if(posts === undefined) return <></>
+  
     return (
         <PostsContainer className='posts-container'>
             <NavLoggedIn removeBorder={true} />
