@@ -32,7 +32,6 @@ module.exports = async function(req, res, next){
       req.user = verified
       next()
    }catch(err){
-     console.log("token error :")
       return res.status(400).json('invalidtoken' + err)
    }
  
