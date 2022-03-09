@@ -102,6 +102,7 @@ export default function CreatePost(props) {
 
 const Container = styled.div`
 padding: 0.5rem 1rem;
+padding-bottom: 3rem;
 max-width:700px;
 margin-left:auto;
 margin-right:auto;
