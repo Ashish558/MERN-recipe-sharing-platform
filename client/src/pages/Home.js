@@ -6,7 +6,7 @@ const Home = () => {
 
   useEffect(() => {
     console.log(isAuthenticated)
-    if (isAuthenticated) window.location='/posts'
+    if (isAuthenticated) return window.location='/posts'
      return window.location='/login'
 
   }, [])
