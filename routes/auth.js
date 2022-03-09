@@ -32,7 +32,7 @@ router.post('/register', async function (req, res) {
       },
       username,
       password: hashedPassword,
-      profileImageSrc: "default.jpeg"
+      profileImageSrc: "https://res.cloudinary.com/due9g6njy/image/upload/v1646808359/recipe/profile/default_y72rh0.jpg"
    })
 
    await newUser.save()
